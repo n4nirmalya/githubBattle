@@ -10,25 +10,27 @@ export default function Nav () {
   return (
     <ThemeConsumer>
       {({ theme, toggleTheme }) => (
-        <nav className='row space-between'>
+        <nav className='row space-between' id="main-nav">
           <ul className='row nav'>
             <li>
               <NavLink
                 to='/'
                 exact
                 className='nav-link'
-                activeStyle={{
-                  fontWeight: "bold",
-                  color: "red"
-                }}>
+                activeClassName="selected"
+                >
                   Popular
               </NavLink>
             </li>
             <li>
               <NavLink
                 to='/battle'
-                activeStyle={{textDecoration:"underline" , color:"red"}}
-                className='nav-link'>
+                className='nav-link'
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "red"
+                }}
+                >
                   Battle
               </NavLink>
             </li>

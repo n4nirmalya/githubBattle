@@ -33,9 +33,11 @@ export default class Loading extends React.Component {
     }
     render() {
         return (
-            <p style={styles.content}>
-                {this.state.content}
-            </p>
+            <div style={{height:'300px',display:'flex', justifyContent:'center', alignItems:'center',verticalAlign:'center'}}>
+                <p style={styles.content}>
+                    {this.state.content}
+                </p>
+            </div>
         )
     }
 }

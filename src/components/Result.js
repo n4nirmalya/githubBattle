@@ -49,6 +49,7 @@ ProfileList.propTypes = {
 export default class Results extends React.Component {
     constructor(props) {
         super(props);
+        console.log(props);
         this.state = {
             winner: null,
             loser: null,
@@ -57,6 +58,7 @@ export default class Results extends React.Component {
         }
     }
     componentDidMount() {
+        debugger
         const { playerOne, playerTwo } = queryString.parse(this.props.location.search);
         battle([playerOne, playerTwo])
             .then(players => {
